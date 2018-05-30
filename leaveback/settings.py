@@ -100,15 +100,17 @@ WSGI_APPLICATION = 'leaveback.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'leaveback',
-        'USER': 'leavebackuser',
-        'PASSWORD': 'pass',
-        'HOST': 'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'leaveback',
+#         'USER': 'leavebackuser',
+#         'PASSWORD': 'pass',
+#         'HOST': 'localhost'
+#     }
+# }
+
+DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'])}
 
 
 # Password validation
