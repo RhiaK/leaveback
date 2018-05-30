@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import django_heroku
 PROJECT_DIR=os.path.dirname(__file__)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -100,20 +101,17 @@ WSGI_APPLICATION = 'leaveback.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'leaveback',
-#         'USER': 'leavebackuser',
-#         'PASSWORD': 'pass',
-#         'HOST': 'localhost'
-#     }
-# }
-
-import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'leaveback',
+        'USER': 'leavebackuser',
+        'PASSWORD': 'pass',
+        'HOST': 'localhost'
+    }
 }
+
+
 
 
 # Password validation
@@ -155,3 +153,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(PROJECT_DIR,'static_media/')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+django_heroku.settings(locals())
