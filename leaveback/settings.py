@@ -25,7 +25,9 @@ SECRET_KEY = '8hic&7__o@xj@fqw7$23954m^2(n-$pcs)6ft)^*j4nggf4jku'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'morning-shore-71159.herokuapp.com'
+]
 
 
 # Application definition
@@ -64,7 +66,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000/',
-    'django-leave.herokuapp.com',
+    'morning-shore-71159.herokuapp.com',
     'localhost:8000',
     '127.0.0.1:8000',
 )
