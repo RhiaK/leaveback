@@ -15,7 +15,7 @@ class Dest(models.Model):
 	dest_time = models.TimeField(auto_now=False, auto_now_add=False)
 	
 class User(models.Model):
-	name = models.CharField(max_length=50)
+	username = models.CharField(max_length=50)
 	email = models.CharField(max_length=50)
 	password = models.CharField(max_length=20)
 	phone = models.IntegerField()

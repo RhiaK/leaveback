@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Dest
+from .models import User
 
-admin.site.register(Dest)
+admin.site.register(User)
