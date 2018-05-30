@@ -27,14 +27,15 @@ SECRET_KEY = '8hic&7__o@xj@fqw7$23954m^2(n-$pcs)6ft)^*j4nggf4jku'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'morning-shore-71159.herokuapp.com'
+    'morning-shore-71159.herokuapp.com',
+    'localhost:8000',
+    'localhost'
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'main_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'whitenoise',
+    'leaveback',
+    'main_app',
 ]
 
 REST_FRAMEWORK = {
